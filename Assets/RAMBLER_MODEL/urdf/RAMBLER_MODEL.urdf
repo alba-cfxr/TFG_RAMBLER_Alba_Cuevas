@@ -1,0 +1,940 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- This URDF was automatically created by SolidWorks to URDF Exporter! Originally created by Stephen Brawner (brawner@gmail.com) 
+     Commit Version: 1.6.0-4-g7f85cfe  Build Version: 1.6.7995.38578
+     For more information, please see http://wiki.ros.org/sw_urdf_exporter -->
+<robot
+  name="RAMBLER_MODEL">
+  <link
+    name="Rambler-chasis">
+    <inertial>
+      <origin
+        xyz="0.049839 -0.3194 0.81553"
+        rpy="0 0 0" />
+      <mass
+        value="410.95" />
+      <inertia
+        ixx="95.795"
+        ixy="-0.00061373"
+        ixz="0.070807"
+        iyy="118.73"
+        iyz="0.56493"
+        izz="49.215" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://RAMBLER_MODEL/meshes/Rambler-chasis.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.79216 0.81961 0.93333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://RAMBLER_MODEL/meshes/Rambler-chasis.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <link
+    name="Suspension-delante-dcha">
+    <inertial>
+      <origin
+        xyz="0.049839 -0.3194 0.81553"
+        rpy="0 0 0" />
+      <mass
+        value="410.95" />
+      <inertia
+        ixx="95.795"
+        ixy="-0.00061373"
+        ixz="0.070807"
+        iyy="118.73"
+        iyz="0.56493"
+        izz="49.215" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://RAMBLER_MODEL/meshes/Suspension-delante-dcha.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.79216 0.81961 0.93333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://RAMBLER_MODEL/meshes/Suspension-delante-dcha.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="suspension-delante-dcha"
+    type="revolute">
+    <origin
+      xyz="0.033294 0 -0.03"
+      rpy="3.1416 0 1.5708" />
+    <parent
+      link="Rambler-chasis" />
+    <child
+      link="Suspension-delante-dcha" />
+    <axis
+      xyz="1 0 0" />
+    <limit
+      lower="0"
+      upper="0.47124"
+      effort="0"
+      velocity="0" />
+  </joint>
+  <link
+    name="Piston-delante-dcha">
+    <inertial>
+      <origin
+        xyz="0.049839 -0.3194 0.81553"
+        rpy="0 0 0" />
+      <mass
+        value="410.95" />
+      <inertia
+        ixx="95.795"
+        ixy="-0.00061373"
+        ixz="0.070807"
+        iyy="118.73"
+        iyz="0.56493"
+        izz="49.215" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://RAMBLER_MODEL/meshes/Piston-delante-dcha.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.79216 0.81961 0.93333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://RAMBLER_MODEL/meshes/Piston-delante-dcha.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="piston-delante-dcha"
+    type="revolute">
+    <origin
+      xyz="-0.36 0.37595 0.015382"
+      rpy="0 0 0" />
+    <parent
+      link="Suspension-delante-dcha" />
+    <child
+      link="Piston-delante-dcha" />
+    <axis
+      xyz="-1 0 0" />
+    <limit
+      lower="0"
+      upper="0.43633"
+      effort="0"
+      velocity="0" />
+  </joint>
+  <link
+    name="Rueda-delante-dcha">
+    <inertial>
+      <origin
+        xyz="0.0498394090259186 -0.319396233416161 0.815532777176436"
+        rpy="0 0 0" />
+      <mass
+        value="410.95" />
+      <inertia
+        ixx="95.7952062704607"
+        ixy="-0.000613730429750716"
+        ixz="0.0708074089645571"
+        iyy="118.733433081717"
+        iyz="0.564932560850824"
+        izz="49.2145028687947" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://RAMBLER_MODEL/meshes/Rueda-delante-dcha.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.792156862745098 0.819607843137255 0.933333333333333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <cylinder length="0.165" radius="0.50"/>
+        <!--mesh
+          filename="package://RAMBLER_MODEL/meshes/Rueda-delante-dcha.STL" /-->
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="rueda-delante-dcha"
+    type="continuous">
+    <origin
+      xyz="-0.522445710742998 0.435600590171303 0.0457834669112627"
+      rpy="3.14159265358979 0 1.5707963267949" />
+    <parent
+      link="Suspension-delante-dcha" />
+    <child
+      link="Rueda-delante-dcha" />
+    <axis
+      xyz="0 1 0" />
+  </joint>
+  <link
+    name="Suspension-delante-izq">
+    <inertial>
+      <origin
+        xyz="0.049839 -0.3194 0.81553"
+        rpy="0 0 0" />
+      <mass
+        value="410.95" />
+      <inertia
+        ixx="95.795"
+        ixy="-0.00061373"
+        ixz="0.070807"
+        iyy="118.73"
+        iyz="0.56493"
+        izz="49.215" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://RAMBLER_MODEL/meshes/Suspension-delante-izq.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.79216 0.81961 0.93333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://RAMBLER_MODEL/meshes/Suspension-delante-izq.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="suspension-delante-izq"
+    type="revolute">
+    <origin
+      xyz="0.033294 0 -0.03"
+      rpy="3.1416 0 1.5708" />
+    <parent
+      link="Rambler-chasis" />
+    <child
+      link="Suspension-delante-izq" />
+    <axis
+      xyz="1 0 0" />
+    <limit
+      lower="0"
+      upper="0.47124"
+      effort="0"
+      velocity="0" />
+  </joint>
+  <link
+    name="Piston-delante-izq">
+    <inertial>
+      <origin
+        xyz="0.0498394090259186 -0.319396233416161 0.815532777176436"
+        rpy="0 0 0" />
+      <mass
+        value="410.95" />
+      <inertia
+        ixx="95.7952062704607"
+        ixy="-0.000613730429750716"
+        ixz="0.0708074089645571"
+        iyy="118.733433081717"
+        iyz="0.564932560850824"
+        izz="49.2145028687947" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://RAMBLER_MODEL/meshes/Piston-delante-izq.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.792156862745098 0.819607843137255 0.933333333333333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://RAMBLER_MODEL/meshes/Piston-delante-izq.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="piston-delante-izq"
+    type="revolute">
+    <origin
+      xyz="-0.36 0.37595 0.015382"
+      rpy="0 0 0" />
+    <parent
+      link="Suspension-delante-izq" />
+    <child
+      link="Piston-delante-izq" />
+    <axis
+      xyz="-1 0 0" />
+    <limit
+      lower="0"
+      upper="0.43633"
+      effort="0"
+      velocity="0" />
+  </joint>
+  <link
+    name="Rueda-delante-izq">
+    <inertial>
+      <origin
+        xyz="0.0498394090259186 -0.319396233416161 0.815532777176436"
+        rpy="0 0 0" />
+      <mass
+        value="410.95" />
+      <inertia
+        ixx="95.7952062704607"
+        ixy="-0.000613730429750716"
+        ixz="0.0708074089645571"
+        iyy="118.733433081717"
+        iyz="0.564932560850824"
+        izz="49.2145028687947" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://RAMBLER_MODEL/meshes/Rueda-delante-izq.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="1 1 1 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <cylinder length="0.165" radius="0.50"/>
+        <!--mesh
+          filename="package://RAMBLER_MODEL/meshes/Rueda-delante-izq.STL" /-->
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="rueda-delante-izq"
+    type="continuous">
+    <origin
+      xyz="0.52245 0.4356 0.045783"
+      rpy="3.1416 0 1.5708" />
+    <parent
+      link="Suspension-delante-izq" />
+    <child
+      link="Rueda-delante-izq" />
+    <axis
+      xyz="0 1 0" />
+  </joint>
+  <link
+    name="Suspension-atras-dcha">
+    <inertial>
+      <origin
+        xyz="0.0498394090259186 -0.319396233416161 0.815532777176436"
+        rpy="0 0 0" />
+      <mass
+        value="410.95" />
+      <inertia
+        ixx="95.7952062704607"
+        ixy="-0.000613730429750716"
+        ixz="0.0708074089645571"
+        iyy="118.733433081717"
+        iyz="0.564932560850824"
+        izz="49.2145028687947" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://RAMBLER_MODEL/meshes/Suspension-atras-dcha.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.792156862745098 0.819607843137255 0.933333333333333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://RAMBLER_MODEL/meshes/Suspension-atras-dcha.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="suspension-atras-dcha"
+    type="revolute">
+    <origin
+      xyz="-0.033294 0 -0.03"
+      rpy="3.1416 0 1.5708" />
+    <parent
+      link="Rambler-chasis" />
+    <child
+      link="Suspension-atras-dcha" />
+    <axis
+      xyz="1 0 0" />
+    <limit
+      lower="5.812"
+      upper="6.2832"
+      effort="0"
+      velocity="0" />
+  </joint>
+  <link
+    name="Piston-atras-dcha">
+    <inertial>
+      <origin
+        xyz="0.0498394090259186 -0.319396233416161 0.815532777176436"
+        rpy="0 0 0" />
+      <mass
+        value="410.95" />
+      <inertia
+        ixx="95.7952062704607"
+        ixy="-0.000613730429750716"
+        ixz="0.0708074089645571"
+        iyy="118.733433081717"
+        iyz="0.564932560850824"
+        izz="49.2145028687947" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://RAMBLER_MODEL/meshes/Piston-atras-dcha.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.792156862745098 0.819607843137255 0.933333333333333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://RAMBLER_MODEL/meshes/Piston-atras-dcha.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="piston-atras-dcha"
+    type="revolute">
+    <origin
+      xyz="-0.36 -0.37595 0.015382"
+      rpy="0 0 0" />
+    <parent
+      link="Suspension-atras-dcha" />
+    <child
+      link="Piston-atras-dcha" />
+    <axis
+      xyz="-1 0 0" />
+    <limit
+      lower="5.8469"
+      upper="6.2832"
+      effort="0"
+      velocity="0" />
+  </joint>
+  <link
+    name="Rueda-atras-dcha">
+    <inertial>
+      <origin
+        xyz="0.0498394090259186 -0.319396233416161 0.815532777176436"
+        rpy="0 0 0" />
+      <mass
+        value="410.95" />
+      <inertia
+        ixx="95.7952062704607"
+        ixy="-0.000613730429750716"
+        ixz="0.0708074089645571"
+        iyy="118.733433081717"
+        iyz="0.564932560850824"
+        izz="49.2145028687947" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://RAMBLER_MODEL/meshes/Rueda-atras-dcha.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.792156862745098 0.819607843137255 0.933333333333333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <cylinder length="0.165" radius="0.50"/>
+        <!--mesh
+          filename="package://RAMBLER_MODEL/meshes/Rueda-atras-dcha.STL" /-->
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="rueda-atras-dcha"
+    type="continuous">
+    <origin
+      xyz="-0.522445710742998 -0.435600590171305 0.0457834669112622"
+      rpy="3.14159265358979 0 1.5707963267949" />
+    <parent
+      link="Suspension-atras-dcha" />
+    <child
+      link="Rueda-atras-dcha" />
+    <axis
+      xyz="0 1 0" />
+  </joint>
+  <link
+    name="Suspension-atras-izq">
+    <inertial>
+      <origin
+        xyz="0.0498394090259186 -0.319396233416161 0.815532777176436"
+        rpy="0 0 0" />
+      <mass
+        value="410.95" />
+      <inertia
+        ixx="95.7952062704607"
+        ixy="-0.000613730429750716"
+        ixz="0.0708074089645571"
+        iyy="118.733433081717"
+        iyz="0.564932560850824"
+        izz="49.2145028687947" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://RAMBLER_MODEL/meshes/Suspension-atras-izq.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.792156862745098 0.819607843137255 0.933333333333333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://RAMBLER_MODEL/meshes/Suspension-atras-izq.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="suspension-atras-izq"
+    type="revolute">
+    <origin
+      xyz="-0.033294 0 -0.03"
+      rpy="3.1416 0 1.5708" />
+    <parent
+      link="Rambler-chasis" />
+    <child
+      link="Suspension-atras-izq" />
+    <axis
+      xyz="1 0 0" />
+    <limit
+      lower="5.812"
+      upper="6.2832"
+      effort="0"
+      velocity="0" />
+  </joint>
+  <link
+    name="Piston-atras-izq">
+    <inertial>
+      <origin
+        xyz="0.0498394090259186 -0.319396233416161 0.815532777176436"
+        rpy="0 0 0" />
+      <mass
+        value="410.95" />
+      <inertia
+        ixx="95.7952062704607"
+        ixy="-0.000613730429750716"
+        ixz="0.0708074089645571"
+        iyy="118.733433081717"
+        iyz="0.564932560850824"
+        izz="49.2145028687947" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://RAMBLER_MODEL/meshes/Piston-atras-izq.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.792156862745098 0.819607843137255 0.933333333333333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://RAMBLER_MODEL/meshes/Piston-atras-izq.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="piston-atras-izq"
+    type="revolute">
+    <origin
+      xyz="-0.36 -0.37595 0.015382"
+      rpy="0 0 0" />
+    <parent
+      link="Suspension-atras-izq" />
+    <child
+      link="Piston-atras-izq" />
+    <axis
+      xyz="-1 0 0" />
+    <limit
+      lower="5.8469"
+      upper="6.2832"
+      effort="0"
+      velocity="0" />
+  </joint>
+  <link
+    name="Rueda-atras-izq">
+    <inertial>
+      <origin
+        xyz="0.0498394090259186 -0.319396233416161 0.815532777176436"
+        rpy="0 0 0" />
+      <mass
+        value="410.95" />
+      <inertia
+        ixx="95.7952062704607"
+        ixy="-0.000613730429750716"
+        ixz="0.0708074089645571"
+        iyy="118.733433081717"
+        iyz="0.564932560850824"
+        izz="49.2145028687947" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://RAMBLER_MODEL/meshes/Rueda-atras-izq.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="1 1 1 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <cylinder length="0.165" radius="0.50"/>
+        <!--mesh
+          filename="package://RAMBLER_MODEL/meshes/Rueda-atras-izq.STL" /-->
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="rueda-atras-izq"
+    type="continuous">
+    <origin
+      xyz="0.52245 -0.4356 0.045783"
+      rpy="3.1416 0 1.5708" />
+    <parent
+      link="Suspension-atras-izq" />
+    <child
+      link="Rueda-atras-izq" />
+    <axis
+      xyz="0 1 0" />
+  </joint>
+  <link
+    name="Perifericos-Sensores">
+    <inertial>
+      <origin
+        xyz="0.0498394090259186 -0.319396233416161 0.815532777176436"
+        rpy="0 0 0" />
+      <mass
+        value="410.95" />
+      <inertia
+        ixx="95.7952062704607"
+        ixy="-0.000613730429750716"
+        ixz="0.0708074089645571"
+        iyy="118.733433081717"
+        iyz="0.564932560850824"
+        izz="49.2145028687947" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://RAMBLER_MODEL/meshes/Perifericos-Sensores.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="1 1 1 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://RAMBLER_MODEL/meshes/Perifericos-Sensores.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="perifericos-sensores"
+    type="fixed">
+    <origin
+      xyz="0 0 0"
+      rpy="0 0 0" />
+    <parent
+      link="Rambler-chasis" />
+    <child
+      link="Perifericos-Sensores" />
+    <axis
+      xyz="0 0 0" />
+  </joint>
+  <link
+    name="WiFi-Router">
+    <inertial>
+      <origin
+        xyz="0.0498394090259186 -0.319396233416161 0.815532777176436"
+        rpy="0 0 0" />
+      <mass
+        value="410.95" />
+      <inertia
+        ixx="95.7952062704607"
+        ixy="-0.000613730429750716"
+        ixz="0.0708074089645571"
+        iyy="118.733433081717"
+        iyz="0.564932560850824"
+        izz="49.2145028687947" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://RAMBLER_MODEL/meshes/WiFi-Router.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="1 1 1 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://RAMBLER_MODEL/meshes/WiFi-Router.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="WiFi-Router"
+    type="fixed">
+    <origin
+      xyz="0 0 0"
+      rpy="0 0 0" />
+    <parent
+      link="Perifericos-Sensores" />
+    <child
+      link="WiFi-Router" />
+    <axis
+      xyz="0 0 0" />
+  </joint>
+  <link
+    name="Multisensor VRTK2">
+    <inertial>
+      <origin
+        xyz="0.0498394090259186 -0.319396233416161 0.815532777176436"
+        rpy="0 0 0" />
+      <mass
+        value="410.95" />
+      <inertia
+        ixx="95.7952062704607"
+        ixy="-0.000613730429750716"
+        ixz="0.0708074089645571"
+        iyy="118.733433081717"
+        iyz="0.564932560850824"
+        izz="49.2145028687947" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://RAMBLER_MODEL/meshes/Multisensor VRTK2.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.752941176470588 0.752941176470588 0.752941176470588 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <box size="0.324 0.13 0.082"/>
+        <!--<mesh
+          filename="package://RAMBLER/meshes/Multisensor VRTK2.STL" />-->
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="Multisensor VRTK2"
+    type="fixed">
+    <origin
+      xyz="0.34487 0.00025 0.99"
+      rpy="0 0 0" />
+    <parent
+      link="Perifericos-Sensores" />
+    <child
+      link="Multisensor VRTK2" />
+    <axis
+      xyz="0 0 0" />
+  </joint>
+  <link
+    name="Camara-PTZ">
+    <inertial>
+      <origin
+        xyz="0.049839 -0.3194 0.81553"
+        rpy="0 0 0" />
+      <mass
+        value="410.95" />
+      <inertia
+        ixx="95.795"
+        ixy="-0.00061373"
+        ixz="0.070807"
+        iyy="118.73"
+        iyz="0.56493"
+        izz="49.215" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://RAMBLER_MODEL/meshes/Camara-PTZ.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.79216 0.81961 0.93333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://RAMBLER_MODEL/meshes/Camara-PTZ.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="Camara-PTZ"
+    type="fixed">
+    <origin
+      xyz="0 0 0"
+      rpy="0 0 0" />
+    <parent
+      link="Perifericos-Sensores" />
+    <child
+      link="Camara-PTZ" />
+    <axis
+      xyz="0 0 0" />
+  </joint>
+</robot>
